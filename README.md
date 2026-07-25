@@ -81,17 +81,6 @@ MEDUSA_BACKEND_URL=https://api.example.com
 # CRYPTONLY_WEBHOOK_URL=https://YOUR_SUBDOMAIN.ngrok-free.app/hooks/payment/cryptonly_cryptonly
 ```
 
-## Webhooks & `MEDUSA_BACKEND_URL`
-
-Medusa Admin derives `admin.backendUrl` from `MEDUSA_BACKEND_URL`, which is also a convenient webhook origin.
-
-| Environment | Recommendation |
-|-------------|----------------|
-| **Production** | Set `MEDUSA_BACKEND_URL` to your public HTTPS API origin. Admin and webhooks can share it. |
-| **Local + ngrok** | Pin Admin to same-origin (`admin: { backendUrl: "/" }`) and set `CRYPTONLY_WEBHOOK_URL` to `https://…/hooks/payment/cryptonly_cryptonly`.|
-
-No dashboard-level default webhook is needed — each invoice is created with `webhookUrl` set automatically.
-
 ## Checkout flow
 
 1. Storefront initiates a payment session with provider id `pp_cryptonly_cryptonly`.
@@ -118,11 +107,11 @@ pp_cryptonly_cryptonly: {
 },
 ```
 
-Add a Cryptonly SVG icon at `src/modules/common/icons/cryptonly.tsx` — a ready-made one is available in [`dev-store/patches/storefront/`](./dev-store/patches/storefront/).
+Add a Cryptonly SVG icon at `src/modules/common/icons/cryptonly.tsx` — a ready-made one is available in `dev-store/patches/storefront/`.
 
 ## Development
 
-A full local harness (Medusa + Docker Postgres + yalc-linked plugin + Next.js storefront) lives in [`dev-store/`](./dev-store/). See [`dev-store/README.md`](./dev-store/README.md) for setup and scripts.
+A full local harness (Medusa + Docker Postgres + yalc-linked plugin + Next.js storefront) lives in `dev-store/`. See `dev-store/README.md` for setup and scripts.
 
 ## Limitations
 

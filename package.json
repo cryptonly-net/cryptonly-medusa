@@ -1,6 +1,6 @@
 {
   "name": "@cryptonly/medusa-plugin-cryptonly",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official Cryptonly payment provider for Medusa v2.",
   "author": "Cryptonly",
   "license": "MIT",
@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/cryptonly-net/cryptonly-medusa/issues"
   },
-  "homepage": "https://github.com/cryptonly-net/cryptonly-medusa#readme",
+  "homepage": "https://cryptonly.net",
   "keywords": [
     "medusa-plugin",
     "medusa-plugin-integration",
