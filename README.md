@@ -67,6 +67,8 @@ Keep provider `id: "cryptonly"` — the webhook path is `/hooks/payment/cryptonl
 
 `apiKey`, `accountId`, and `webhookSigningKey` must be non-empty strings, otherwise the provider will not register.
 
+For more on sandbox testing (simulate payment, test webhooks), see [Testing your integration](https://cryptonly.net/docs/guides/testing-your-integration).
+
 ### Environment variables
 
 ```bash
@@ -95,7 +97,7 @@ No dashboard-level default webhook is needed — each invoice is created with `w
 1. Storefront initiates a payment session with provider id `pp_cryptonly_cryptonly`.
 2. The session's `data.paymentPageUrl` is the Cryptonly hosted checkout URL — redirect the customer there.
 3. After payment, Cryptonly POSTs to `{backend}/hooks/payment/cryptonly_cryptonly`.
-4. The provider verifies the signature and marks the session captured on `paid` or `overpaid`. `partially_paid` maps to failed.
+4. The provider verifies the signature and marks the session captured on `paid` or `overpaid`.
 
 ## Storefront integration
 
