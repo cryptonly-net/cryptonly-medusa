@@ -61,9 +61,9 @@ Then enable Cryptonly on a region in Medusa Admin — done.
 
 ## Requirements
 
-- Medusa v2.8+ · Node 20+
+- Medusa v2.8+ 
+- Node 20+
 - Cryptonly merchant account
-- Public HTTPS backend URL for webhooks
 
 ## Support
 
