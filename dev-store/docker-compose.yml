@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cryptonly-medusa-dev-db
+    restart: unless-stopped
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: medusa
+      POSTGRES_PASSWORD: medusa
+      POSTGRES_DB: cryptonly_medusa_dev
+    volumes:
+      - cryptonly_medusa_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medusa -d cryptonly_medusa_dev"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  cryptonly_medusa_pg:
