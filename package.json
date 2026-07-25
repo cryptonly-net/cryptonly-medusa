@@ -1,6 +1,6 @@
 {
   "name": "@cryptonly/medusa-plugin-cryptonly",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Official Cryptonly payment provider for Medusa v2.",
   "author": "Cryptonly",
   "license": "MIT",
@@ -46,25 +46,15 @@
   "scripts": {
     "build": "medusa plugin:build",
     "dev": "medusa plugin:develop",
-    "publish:local": "yalc publish --no-scripts",
     "typecheck": "tsc --noEmit",
     "test:utils": "ts-node --transpile-only scripts/utils.selftest.ts",
-    "prepublishOnly": "npm run build",
-    "env:setup": "bash ./dev-store/scripts/setup.sh",
-    "env:dev": "npm --prefix ./dev-store run dev",
-    "env:storefront": "npm --prefix ./dev-storefront run dev",
-    "env:link": "bash ./dev-store/scripts/link-plugin.sh",
-    "env:tunnel": "bash ./dev-store/scripts/set-tunnel-url.sh",
-    "env:db:up": "npm --prefix ./dev-store run db:up",
-    "env:db:down": "npm --prefix ./dev-store run db:down",
-    "env:storefront:bootstrap": "bash ./dev-store/scripts/bootstrap-storefront.sh && bash ./dev-store/scripts/write-storefront-env.sh"
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@cryptonly/sdk": "^1.2.0"
   },
   "peerDependencies": {
-    "@medusajs/framework": "^2.8.0",
-    "@medusajs/medusa": "^2.8.0"
+    "@medusajs/framework": ">=2.8.0 <3.0.0"
   },
   "devDependencies": {
     "@medusajs/cli": "2.18.0",
@@ -73,7 +63,6 @@
     "@swc/core": "^1.7.28",
     "@types/node": "^20.12.11",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.2",
-    "yalc": "^1.0.0-pre.53"
+    "typescript": "^5.6.2"
   }
 }

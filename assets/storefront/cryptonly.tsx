@@ -1,8 +1,11 @@
 import React from "react"
 
-import { IconProps } from "types/icon"
+export type CryptonlyIconProps = React.SVGProps<SVGSVGElement> & {
+  size?: string | number
+}
 
-const Cryptonly: React.FC<IconProps> = ({
+/** Reference checkout icon for Medusa Next.js starter `paymentInfoMap`. */
+const Cryptonly: React.FC<CryptonlyIconProps> = ({
   size = "20",
   ...attributes
 }) => {

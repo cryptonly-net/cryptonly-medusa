@@ -6,7 +6,7 @@
 
 Accept Bitcoin, Ethereum, stablecoins, and more in your Medusa store.
 
-[Website](https://cryptonly.net) · [Documentation](https://cryptonly.gitbook.io/docs/integration/cms-plugins/medusa) · [Contact](https://cryptonly.net/contact/)
+[Website](https://cryptonly.net) · [Documentation](https://cryptonly.gitbook.io/docs/integration/cms-plugins/medusa) · [Live demo](https://medusa-demo.cryptonly.net) · [Contact](https://cryptonly.net/contact/)
 
 </div>
 
