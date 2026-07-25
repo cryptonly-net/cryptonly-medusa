@@ -1,12 +1,10 @@
-# Cryptonly payment provider for Medusa
+<img src="https://raw.githubusercontent.com/cryptonly-net/.github/main/profile/assets/header-banner.svg" alt="Cryptonly" width="100%" />
 
-<p align="center">
-  <img src="assets/cryptonly-medusa-icon.png" alt="Cryptonly" width="96" height="96" />
-</p>
+# Cryptonly - Crypto payment provider for Medusa v2
 
 `@cryptonly/medusa-plugin-cryptonly` lets Medusa v2 stores accept cryptocurrency payments via the [Cryptonly](https://cryptonly.net) hosted checkout.
 
-Customers select Cryptonly at checkout, pay on the Cryptonly payment page, and return to your store. Payment status in Medusa updates automatically via signed `invoice.statusChanged` webhooks.
+Customers select Cryptonly at checkout, pay on the Cryptonly payment page, and return to your store. Payment status in Medusa updates automatically via signed webhooks.
 
 ## Requirements
 

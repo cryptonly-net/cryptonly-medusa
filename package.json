@@ -1,7 +1,7 @@
 {
   "name": "@cryptonly/medusa-plugin-cryptonly",
   "version": "0.1.0",
-  "description": "Official Cryptonly payment provider for Medusa v2. Hosted cryptocurrency checkout with signed invoice.statusChanged webhooks.",
+  "description": "Official Cryptonly payment provider for Medusa v2.",
   "author": "Cryptonly",
   "license": "MIT",
   "repository": {
