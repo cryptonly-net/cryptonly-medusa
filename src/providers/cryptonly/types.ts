@@ -29,10 +29,22 @@ export type CryptonlyPaymentOptions = {
    */
   webhookUrl?: string
   /**
-   * Optional default return URL after the customer finishes on the hosted page.
-   * Can also be passed per session via `data.returnUrl`.
+   * Optional default return URL after cancel / expire on the hosted page
+   * ("Back to Store" CTA for `created` / `cancelled` / `expired`).
+   * Fallback only — prefer `data.returnUrl` on each payment session.
+   * Any http(s) URL is allowed (including localhost).
    */
   returnUrl?: string
+  /**
+   * Optional default success URL after paid / overpaid.
+   * Fallback only — prefer `data.successUrl` on each payment session.
+   */
+  successUrl?: string
+  /**
+   * Optional default failed URL after failed / suspended / partially_paid.
+   * Fallback only — prefer `data.failedUrl` on each payment session.
+   */
+  failedUrl?: string
   /**
    * Optional invoice expiry in minutes (Cryptonly API).
    */
@@ -50,6 +62,8 @@ export type CryptonlyPaymentSessionData = {
   currency?: string
   accountId?: string
   returnUrl?: string
+  successUrl?: string
+  failedUrl?: string
   [key: string]: unknown
 }
 

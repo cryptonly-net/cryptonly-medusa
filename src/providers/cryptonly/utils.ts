@@ -142,7 +142,7 @@ export function mapInvoiceToSessionStatus(
 }
 
 export function invoiceSnapshot(invoice: Invoice): Record<string, unknown> {
-  return {
+  const snapshot: Record<string, unknown> = {
     invoiceId: invoice.id,
     orderId: invoice.orderId,
     paymentPageUrl: invoice.paymentPageUrl,
@@ -157,4 +157,16 @@ export function invoiceSnapshot(invoice: Invoice): Record<string, unknown> {
     expiresAt: invoice.expiresAt,
     paidAt: invoice.paidAt,
   }
+
+  if (invoice.returnUrl) {
+    snapshot.returnUrl = invoice.returnUrl
+  }
+  if (invoice.successUrl) {
+    snapshot.successUrl = invoice.successUrl
+  }
+  if (invoice.failedUrl) {
+    snapshot.failedUrl = invoice.failedUrl
+  }
+
+  return snapshot
 }

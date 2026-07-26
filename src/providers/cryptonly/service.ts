@@ -206,6 +206,12 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
     const returnUrl =
       (typeof input.data?.returnUrl === "string" && input.data.returnUrl) ||
       this.options_.returnUrl
+    const successUrl =
+      (typeof input.data?.successUrl === "string" && input.data.successUrl) ||
+      this.options_.successUrl
+    const failedUrl =
+      (typeof input.data?.failedUrl === "string" && input.data.failedUrl) ||
+      this.options_.failedUrl
 
     const invoice = await this.client_.invoice.create({
       accountId: this.options_.accountId,
@@ -219,6 +225,8 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
         (typeof input.data?.number === "string" && input.data.number) || undefined,
       webhookUrl: this.resolveWebhookUrl(),
       returnUrl,
+      successUrl,
+      failedUrl,
       expiresInMinutes: this.options_.expiresInMinutes,
       customPayload: sessionId ? buildCustomPayload(sessionId) : undefined,
     })
@@ -234,6 +242,8 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
       currency,
       accountId: invoice.accountId,
       returnUrl,
+      successUrl,
+      failedUrl,
     }
 
     return {

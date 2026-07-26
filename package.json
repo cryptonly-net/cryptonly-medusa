@@ -1,6 +1,6 @@
 {
   "name": "@cryptonly/medusa-plugin-cryptonly",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Official Cryptonly payment provider for Medusa v2.",
   "author": "Cryptonly",
   "license": "MIT",
@@ -51,7 +51,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@cryptonly/sdk": "^1.2.0"
+    "@cryptonly/sdk": "^1.3.0"
   },
   "peerDependencies": {
     "@medusajs/framework": ">=2.8.0 <3.0.0"
