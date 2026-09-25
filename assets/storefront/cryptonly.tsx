@@ -7,6 +7,7 @@ export type CryptonlyIconProps = React.SVGProps<SVGSVGElement> & {
 /** Reference checkout icon for Medusa Next.js starter `paymentInfoMap`. */
 const Cryptonly: React.FC<CryptonlyIconProps> = ({
   size = "20",
+  className,
   ...attributes
 }) => {
   return (
@@ -17,6 +18,7 @@ const Cryptonly: React.FC<CryptonlyIconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-hidden="true"
+      className={["block", className].filter(Boolean).join(" ")}
       {...attributes}
     >
       <title>Cryptonly</title>

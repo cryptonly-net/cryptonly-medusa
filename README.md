@@ -59,6 +59,8 @@ Then enable Cryptonly on a region in Medusa Admin — done.
 
 🔑 Get your API keys: **[merchant.cryptonly.net](https://merchant.cryptonly.net/)**
 
+Key scopes required: `invoices.create`, `invoices.list`, and `invoices.cancel`.
+
 ## Requirements
 
 - Medusa v2.8+ 
