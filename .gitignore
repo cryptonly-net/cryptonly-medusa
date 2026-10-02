@@ -9,3 +9,4 @@ node_modules
 *.events.jsonl
 /.yalc
 /yalc.lock
+.npmrc
