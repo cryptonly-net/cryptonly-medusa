@@ -20,7 +20,7 @@ Customers pay on a secure Cryptonly page and return to your store. You keep pric
 
 - **Hosted checkout** — no crypto UI to build, customers pay on Cryptonly's page
 - **Signed webhooks** — payments capture automatically when paid
-- **Fiat pricing** — price products in USD/EUR, crypto amounts calculated at checkout
+- **Fiat pricing** — price products in your currency, crypto amounts calculated at checkout
 - **Sandbox mode** — test the full flow before going live
 - **0.5% per transaction** — no setup fee, no monthly fee
 
