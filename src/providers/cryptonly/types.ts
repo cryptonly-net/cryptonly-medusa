@@ -1,14 +1,10 @@
 export type CryptonlyPaymentOptions = {
   /**
-   * Cryptonly tenant API key (`x-tenant-api-key`).
+   * Cryptonly API key (`x-tenant-api-key`). The key selects the account.
    */
   apiKey: string
   /**
-   * Cryptonly account UUID used when creating invoices.
-   */
-  accountId: string
-  /**
-   * Webhook signing key (64-char hex) used to verify `x-webhook-signature`.
+   * Webhook signing key (64-char hex) from that account's Security settings.
    */
   webhookSigningKey: string
   /**

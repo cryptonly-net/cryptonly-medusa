@@ -42,7 +42,6 @@ Register the provider in `medusa-config.ts`:
         id: "cryptonly",
         options: {
           apiKey: process.env.CRYPTONLY_API_KEY,
-          accountId: process.env.CRYPTONLY_ACCOUNT_ID,
           webhookSigningKey: process.env.CRYPTONLY_WEBHOOK_SIGNING_KEY,
           sandbox: process.env.CRYPTONLY_SANDBOX === "true",
           backendUrl: process.env.MEDUSA_BACKEND_URL,
@@ -59,7 +58,7 @@ Then enable Cryptonly on a region in Medusa Admin — done.
 
 🔑 Get your API keys: **[merchant.cryptonly.net](https://merchant.cryptonly.net/)**
 
-Key scopes required: `invoices.create`, `invoices.list`, and `invoices.cancel`.
+Key scopes required: `currencies.list`, `invoices.create`, `invoices.list`, and `invoices.cancel`. The API key selects the account.
 
 ## Requirements
 

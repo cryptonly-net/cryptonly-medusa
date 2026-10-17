@@ -94,7 +94,7 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
   }
 
   static validateOptions(options: Record<string, unknown>): void {
-    for (const key of ["apiKey", "accountId", "webhookSigningKey"] as const) {
+    for (const key of ["apiKey", "webhookSigningKey"] as const) {
       const value = options[key]
       if (typeof value !== "string" || value.trim().length === 0) {
         throw new MedusaError(
@@ -133,12 +133,11 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
   private requireCredentials(): void {
     if (
       !this.options_.apiKey?.trim() ||
-      !this.options_.accountId?.trim() ||
       !this.options_.webhookSigningKey?.trim()
     ) {
       throw new MedusaError(
         MedusaError.Types.INVALID_DATA,
-        "Cryptonly payment provider is missing apiKey, accountId, or webhookSigningKey."
+        "Cryptonly payment provider is missing apiKey or webhookSigningKey."
       )
     }
   }
@@ -186,7 +185,6 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
       )
     }
     return this.client_.invoice.get({
-      accountId: this.options_.accountId,
       id: invoiceId,
       orderId,
     })
@@ -214,7 +212,6 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
       this.options_.failedUrl
 
     const invoice = await this.client_.invoice.create({
-      accountId: this.options_.accountId,
       amount,
       fiatCurrencyCode: currency,
       orderId,
@@ -319,7 +316,6 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
 
     try {
       await this.client_.invoice.cancel({
-        accountId: this.options_.accountId,
         id: data.invoiceId,
         orderId: data.orderId,
       })
@@ -390,7 +386,6 @@ class CryptonlyProviderService extends AbstractPaymentProvider<CryptonlyPaymentO
     if (data.invoiceId || data.orderId) {
       try {
         await this.client_.invoice.cancel({
-          accountId: this.options_.accountId,
           id: data.invoiceId,
           orderId: data.orderId,
         })
