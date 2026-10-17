@@ -1,6 +1,6 @@
 {
   "name": "@cryptonly/medusa-plugin-cryptonly",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Official Cryptonly payment provider for Medusa v2.",
   "author": "Cryptonly",
   "license": "MIT",
@@ -48,6 +48,7 @@
     "dev": "medusa plugin:develop",
     "typecheck": "tsc --noEmit",
     "test:utils": "ts-node --transpile-only scripts/utils.selftest.ts",
+    "test": "npm run typecheck && npm run test:utils",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
