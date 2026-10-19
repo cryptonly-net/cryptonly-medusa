@@ -6,7 +6,7 @@
 
 Accept Bitcoin, Ethereum, stablecoins, and more in your Medusa store.
 
-[Website](https://cryptonly.net) · [Documentation](https://cryptonly.gitbook.io/docs/integration/cms-plugins/medusa) · [Live demo](https://medusa-demo.cryptonly.net) · [Contact](https://cryptonly.net/contact/)
+[Website](https://cryptonly.net) · [Documentation](https://docs.cryptonly.net/integration/plugins/medusa/) · [Live demo](https://medusa-demo.cryptonly.net) · [Contact](https://cryptonly.net/contact/)
 
 </div>
 
@@ -54,7 +54,7 @@ Register the provider in `medusa-config.ts`:
 
 Then enable Cryptonly on a region in Medusa Admin — done.
 
-📘 Full setup (webhooks, storefront, testing): **[Medusa integration guide](https://cryptonly.gitbook.io/docs/integration/cms-plugins/medusa)**
+📘 Full setup (webhooks, storefront, testing): **[Medusa integration guide](https://docs.cryptonly.net/integration/plugins/medusa/)**
 
 🔑 Get your API keys: **[merchant.cryptonly.net](https://merchant.cryptonly.net/)**
 
