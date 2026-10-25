@@ -15,20 +15,16 @@ export type CryptonlyPaymentOptions = {
   /**
    * Public Medusa backend origin (no trailing slash), used to build the
    * invoice `webhookUrl` as `{backendUrl}/hooks/payment/cryptonly_cryptonly`
-   * (no `pp_` prefix — Medusa adds it when resolving the provider).
-   * Prefer setting provider `id: "cryptonly"` in medusa-config so this path matches.
-   */
+*/
   backendUrl?: string
   /**
    * Full webhook URL override. When set, takes precedence over `backendUrl`.
-   * Must be a public HTTPS URL Cryptonly can reach.
    */
   webhookUrl?: string
   /**
    * Optional default return URL after cancel / expire on the hosted page
-   * ("Back to Store" CTA for `created` / `cancelled` / `expired`).
+   * ("Return to {store name}" CTA for `created` / `cancelled` / `expired`).
    * Fallback only — prefer `data.returnUrl` on each payment session.
-   * Any http(s) URL is allowed (including localhost).
    */
   returnUrl?: string
   /**
